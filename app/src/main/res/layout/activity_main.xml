@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+
+    <com.pdftron.pdf.PDFViewCtrl
+        android:id="@+id/pdf_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:scrollbarSize="8dp"
+        android:scrollbars="vertical|horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/thumbnail_slider"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.pdftron.pdf.controls.FindTextOverlay
+        android:id="@+id/find_overlay"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/thumbnail_slider"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.pdftron.pdf.controls.ThumbnailSlider
+        android:id="@+id/thumbnail_slider"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="?attr/actionBarSize"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:leftMenuItemDrawable="@null"
+        app:rightMenuItemDrawable="@drawable/ic_dashboard_black_24dp" />
+
+    <ProgressBar
+        android:id="@+id/pbSamplePdf"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:indeterminate="true"
+        android:indeterminateTint="@color/purple_700"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
